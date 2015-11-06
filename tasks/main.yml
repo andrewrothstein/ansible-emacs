@@ -21,13 +21,6 @@
   copy: dest={{emacs_site_d}} src={{item}}
   with_items:
     - 49myemacs.el
-    - 50json-mode.el
-    - 50julia-mode.el
-    - 50magit.el
+    - 50melpa.el
     - 50mycpp.el
     - 50python.el
-    - 50yaml-mode.el
-    - 50sbt-mode.el
-    - 50scala-mode2.el
-    - 51ensime.el
-    - 51go-mode.el
