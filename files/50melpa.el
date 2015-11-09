@@ -10,6 +10,7 @@
   (unless (package-installed-p pkg)
     (package-refresh-contents) (package-install pkg)))
 (let ((pkgs '(magit
+	      tramp-term
 	      docker-tramp
 	      docker
 	      dockerfile-mode
