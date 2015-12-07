@@ -1,2 +1,5 @@
 ---
 # defaults file for emacs
+emacs_build_from_src : False
+emacs_build_ver : '24.5'
+emacs_build_mirror : 'http://ftp.gnu.org/gnu/emacs'

@@ -1,27 +1,21 @@
 ---
-- include_vars: "{{item}}"
-  with_first_found:
-    - "{{ ansible_distribution }}.yml"
-    - "{{ ansible_os_family }}.yml"
-    - "default.yml"
+- name: building from src...
+  when: emacs_build_from_src
+  include: from-src.yml
 
-- name: Debian
-  when: ansible_os_family == 'Debian'
+- name: from pkg-manager...
+  when: not emacs_build_from_src
+  include: from-package-manager.yml
+
+- name: Debian...
+  when: ansible_os_family == 'Debian' and not emacs_build_from_src
   include: Debian.yml
 
 - name: Fedora
-  when: ansible_distribution == 'Fedora'
+  when: ansible_distribution == 'Fedora' and not emacs_build_from_src
   include: Fedora.yml
 
 - name: EL
-  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
+  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora' and not emacs_build_from_src
   include: EL.yml
-
-- name: install emacs modes/settings
-  copy: dest={{emacs_site_d}} src={{item}}
-  with_items:
-    - 49myemacs.el
-    - 50melpa.el
-    - 50mycpp.el
-    - 50python.el
 

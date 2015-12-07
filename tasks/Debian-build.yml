@@ -1,0 +1,40 @@
+---
+- name: build-essential....
+  apt: name=build-essential state=latest
+
+- name: emacs24 build-deps
+  apt: name=emacs24 state=build-dep
+
+- name: downloading...
+  get_url: url='{{emacs_build_url}}' dest='/tmp/{{emacs_build_tgz}}'
+
+- name: unarchiving...
+  unarchive: copy=no src='/tmp/{{emacs_build_tgz}}' dest='/opt'
+
+- name: configuring...
+  command: ./configure
+  args:
+    chdir: /opt/{{emacs_name}}
+    creates: /opt/{{emacs_name}}/Makefile
+
+- name: building...
+  command: make
+  args:
+    chdir: /opt/{{emacs_name}}
+    creates: /opt/{{emacs_name}}/src/emacs
+
+- name: installing...
+  command: make install
+  args:
+    chdir: /opt/{{emacs_name}}
+    creates: /usr/local/bin/emacs
+
+- name: install emacs modes/settings
+  copy: dest=/usr/local/share/emacs/{{emacs_build_ver}}/site-lisp/{{item}} src={{item}}
+  with_items:
+    - 49myemacs.el
+    - 50melpa.el
+    - 50mycpp.el
+    - 50python.el
+
+

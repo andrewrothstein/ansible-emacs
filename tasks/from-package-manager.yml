@@ -1,0 +1,13 @@
+---
+- name: Debian...
+  when: ansible_os_family == 'Debian'
+  include: Debian.yml
+
+- name: Fedora
+  when: ansible_distribution == 'Fedora'
+  include: Fedora.yml
+
+- name: EL
+  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
+  include: EL.yml
+
