@@ -1,12 +1,4 @@
 ---
-- name: building from src...
-  when: emacs_build_from_src
-  include: from-src.yml
-
-- name: from pkg-manager...
-  when: not emacs_build_from_src
-  include: from-package-manager.yml
-
 - name: Debian...
   when: ansible_os_family == 'Debian' and not emacs_build_from_src
   include: Debian.yml

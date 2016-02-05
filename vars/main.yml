@@ -1,5 +1,2 @@
 ---
 # vars file for emacs
-emacs_name : 'emacs-{{emacs_build_ver}}'
-emacs_build_tgz : '{{emacs_name}}.tar.gz'
-emacs_build_url : '{{emacs_build_mirror}}/{{emacs_build_tgz}}'
