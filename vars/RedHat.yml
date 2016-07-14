@@ -1,2 +1,4 @@
 ---
-emacs_site_d : '/usr/share/emacs/site-lisp/site-start.d/'
+emacs_pkgs:
+  - emacs
+emacs_site_d : /usr/share/emacs/site-lisp/site-start.d

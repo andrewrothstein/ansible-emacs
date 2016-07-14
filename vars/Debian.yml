@@ -1,0 +1,6 @@
+---
+emacs_pkgs :
+  - emacs
+  - emacs-goodies-el
+
+emacs_modes_dir: /etc/emacs/site-start.d

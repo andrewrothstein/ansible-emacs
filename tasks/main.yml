@@ -1,13 +1,26 @@
 ---
-- name: Debian...
-  when: ansible_os_family == 'Debian'
-  include: Debian.yml
+- name: resolve platform specific vars
+  include_vars: "{{item}}"
+  with_first_found:
+    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+    - "{{ansible_distribution}}.yml"
+    - "{{ansible_os_family}}.yml"
 
-- name: Fedora
-  when: ansible_distribution == 'Fedora'
-  include: Fedora.yml
+- name: pkgs...
+  become: yes
+  become_user: root
+  package: name={{item}} state=present
+  with_items: '{{emacs_pkgs}}'
 
-- name: EL
-  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
-  include: EL.yml
-
+- name: install emacs modes/settings
+  become : yes
+  become_user: root
+  copy: >
+    dest={{emacs_modes_dir}}/{{item}}
+    src={{item}}
+    mode=0644
+  with_items:
+    - 49myemacs.el
+    - 50melpa.el
+    - 50mycpp.el
+    - 50python.el
