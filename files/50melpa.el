@@ -2,10 +2,7 @@
 
 (add-to-list
  'package-archives
- '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list
- 'package-archives
- '("marmalade" . "http://marmalade-repo.org/packages/"))
+ '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 

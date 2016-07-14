@@ -1,23 +1,22 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: emacs + a bunch of emacs packages
+  description: emacs + some emacs goodies
   company: BlackRock
   license:
     - MIT
-  min_ansible_version: 1.2
+  min_ansible_version: 2.0
   platforms:
     - name: EL
       versions:
         - 7
     - name: Fedora
       versions:
-        - 21
-        - 22
         - 23
     - name: Ubuntu
       versions:
         - trusty
+        - xenial
 
   galaxy_tags:
     - development
