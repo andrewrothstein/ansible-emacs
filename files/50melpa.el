@@ -17,7 +17,6 @@
 	      julia-mode
 	      json-mode
 	      sbt-mode scala-mode2 ensime
-	      yaml-mode
 	      go-mode
 	      json-mode
 	      )))

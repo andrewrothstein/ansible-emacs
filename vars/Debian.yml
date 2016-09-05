@@ -2,5 +2,6 @@
 emacs_pkgs :
   - emacs
   - emacs-goodies-el
+  - yaml-mode
 
 emacs_modes_dir: /etc/emacs/site-start.d
