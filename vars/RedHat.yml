@@ -3,4 +3,4 @@ emacs_pkgs:
   - emacs
   - emacs-yaml-mode
 
-emacs_site_d : /usr/share/emacs/site-lisp/site-start.d
+emacs_modes_dir : /usr/share/emacs/site-lisp/site-start.d
