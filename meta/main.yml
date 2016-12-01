@@ -13,10 +13,13 @@ galaxy_info:
     - name: Fedora
       versions:
         - 23
+        - 24
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
+    - name: Alpine
+      versions:
+        - edge
 
   galaxy_tags:
     - development
