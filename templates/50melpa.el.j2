@@ -9,15 +9,5 @@
 (defun install-it (pkg)
   (unless (package-installed-p pkg)
     (package-refresh-contents) (package-install pkg)))
-(let ((pkgs '(magit
-	      tramp-term
-	      docker-tramp
-	      docker
-	      dockerfile-mode
-	      julia-mode
-	      json-mode
-	      sbt-mode scala-mode2 ensime
-	      go-mode
-	      json-mode
-	      )))
+(let ((pkgs '({{emacs_melpa_pkgs | join(" ")}})))
   (mapc 'install-it pkgs))

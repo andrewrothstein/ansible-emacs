@@ -15,9 +15,9 @@
 - name: install emacs modes/settings
   become : yes
   become_user: root
-  copy: >
+  template: >
+    src={{item}}.j2
     dest={{emacs_modes_dir}}/{{item}}
-    src={{item}}
     mode=0644
   with_items:
     - 49myemacs.el

@@ -3,7 +3,7 @@
  (cons
   "docker"
   '((tramp-login-program "docker")
-    (tramp-login-args (("exec" "-it") ("%h") ("/bin/bash")))
+    (tramp-login-args (("exec" "-it") ("%h") ("/bin/bash" "-l")))
     (tramp-remote-shell "/bin/sh")
     (tramp-remote-shell-args ("-i") ("-c"))))
  tramp-methods)
