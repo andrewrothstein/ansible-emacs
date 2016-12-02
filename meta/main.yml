@@ -19,7 +19,7 @@ galaxy_info:
         - xenial
     - name: Alpine
       versions:
-        - edge
+        - all
 
   galaxy_tags:
     - development
