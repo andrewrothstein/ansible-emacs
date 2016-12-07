@@ -12,7 +12,6 @@ emacs_pkgs:
   - julia-mode
   - json-mode
   - go-mode
-  - json-mode
 
 emacs_python_indent: 2
 emacs_theme: tango
