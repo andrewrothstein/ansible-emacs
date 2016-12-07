@@ -24,3 +24,8 @@
     - 50melpa.el
     - 50mycpp.el
     - 50python.el
+
+- name: bootstrap root user install...
+  become: yes
+  become_user: root
+  command: emacs --batch
