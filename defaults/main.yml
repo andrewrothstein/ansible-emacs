@@ -1,14 +1,10 @@
 ---
 # defaults file for emacs
 emacs_pkg_archives:
-  - name: melpa
-    url: http://melpa.milkbox.net/packages/
-  - name: elpa
-    url: http://tromey.com/elpa/
-  - name: gnu
-    url: http://relpa.gnu.org/packages/
-  - name: marmalade
-    url: http://marmalada-repo.org/packages
+  melpa: http://melpa.milkbox.net/packages/
+  elpa: http://tromey.com/elpa/
+  gnu: http://relpa.gnu.org/packages/
+  marmalade: http://marmalada-repo.org/packages/
 
 emacs_pkgs:
   - magit
