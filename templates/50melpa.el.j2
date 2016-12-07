@@ -1,6 +1,6 @@
 (require 'package)
 (add-to-list 'package-archives
-             '({% for n, u in emacs_pkg_archives.iteritems() %} ("{{n}}" . "{{u}}"){% endfor %}))
+             '({% for n, u in emacs_pkg_archives.iteritems() %} ({{n|to_json}} . {{u|to_json}}){% endfor %}))
 (package-initialize)
 
 (setq url-http-attempt-keepalives nil)
