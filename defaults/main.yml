@@ -1,9 +1,13 @@
 ---
 # defaults file for emacs
-emacs_melpa_pkgs:
-  - tramp-term
-  - docker-tramp
-  - docker
+emacs_pkg_archives:
+  - { name: melpa, url: http://melpa.milkbox.net/packages/ }
+  - { name: elpa, url: http://tromey.com/elpa/ }
+  - { name: gnu, url: http://relpa.gnu.org/packages/ }
+  - { name: marmalade, url: http://marmalada-repo.org/packages }
+
+emacs_pkgs:
+  - magit
   - dockerfile-mode
   - julia-mode
   - json-mode
