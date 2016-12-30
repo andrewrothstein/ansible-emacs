@@ -1,5 +1,5 @@
 ---
-emacs_pkgs :
+emacs_os_pkgs :
   - emacs
   - emacs-goodies-el
   - yaml-mode

@@ -3,7 +3,7 @@
 emacs_pkg_archives:
   melpa: http://melpa.milkbox.net/packages/
   elpa: http://tromey.com/elpa/
-  gnu: http://relpa.gnu.org/packages/
+  gnu: http://elpa.gnu.org/
   marmalade: http://marmalade-repo.org/packages/
 
 emacs_pkgs:

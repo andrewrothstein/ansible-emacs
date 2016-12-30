@@ -2,3 +2,6 @@
 - hosts: all
   roles:
     - role: '{{playbook_dir}}'
+      emacs_pkgs:
+        - json-mode
+        - go-mode

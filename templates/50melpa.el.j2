@@ -1,6 +1,9 @@
 (require 'package)
-(add-to-list 'package-archives
-             '({% for n, u in emacs_pkg_archives.iteritems() %} ({{n|to_json}} . {{u|to_json}}){% endfor %}))
+
+{% for n, u in emacs_pkg_archives.iteritems() %}
+(add-to-list 'package-archives '({{n|to_json}} . {{u|to_json}}))
+{% endfor %}
+
 (package-initialize)
 
 (setq url-http-attempt-keepalives nil)
@@ -9,10 +12,10 @@
   '({{emacs_pkgs | default([]) | join(" ")}})
   "A list of packages to ensure are installed at launch.")
 
+; see http://stackoverflow.com/questions/30847443/emacs-symbols-function-definition-is-void-loop
+(require 'cl-lib)
 (defun prelude-packages-installed-p ()
-  (loop for p in prelude-packages
-        when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
+  (cl-every 'package-installed-p prelude-packages))
 
 (unless (prelude-packages-installed-p)
   ;; check for new packages (package versions)
