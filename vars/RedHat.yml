@@ -2,5 +2,3 @@
 emacs_os_pkgs:
   - emacs
   - emacs-yaml-mode
-
-emacs_modes_dir : /usr/share/emacs/site-lisp/site-start.d
