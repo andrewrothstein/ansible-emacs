@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-emacs.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-emacs)
 andrewrothstein.emacs
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-emacs.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-emacs)
 
 Installs [Emacs](https://www.gnu.org/software/emacs/)
 
