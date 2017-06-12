@@ -24,7 +24,9 @@ galaxy_info:
         - xenial
     - name: Alpine
       versions:
-        - all
+        - '3.5'
+        - '3.6'
+        - edge
 
   galaxy_tags:
     - development
