@@ -15,9 +15,12 @@ galaxy_info:
         - 23
         - 24
         - 25
+        - 26
+        - 27
     - name: Debian
       versions:
         - jessie
+        - stretch
     - name: Ubuntu
       versions:
         - trusty
@@ -26,6 +29,7 @@ galaxy_info:
       versions:
         - '3.5'
         - '3.6'
+        - '3.7'
         - edge
 
   galaxy_tags:
