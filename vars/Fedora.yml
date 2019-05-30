@@ -1,5 +1,3 @@
 ---
 emacs_os_pkgs:
-  - emacs
-  - emacs-goodies
-  - emacs-yaml-mode
+  - emacs-nox
