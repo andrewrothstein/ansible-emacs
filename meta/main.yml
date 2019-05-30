@@ -17,6 +17,9 @@ galaxy_info:
         - 25
         - 26
         - 27
+        - 28
+        - 29
+        - 30
     - name: Debian
       versions:
         - jessie
@@ -25,15 +28,12 @@ galaxy_info:
       versions:
         - trusty
         - xenial
+        - bionic
     - name: Alpine
       versions:
-        - '3.5'
-        - '3.6'
-        - '3.7'
-        - edge
+        - all
 
   galaxy_tags:
     - development
 
 dependencies: []
-  

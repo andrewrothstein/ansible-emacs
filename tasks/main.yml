@@ -1,20 +1,19 @@
 ---
 - name: resolve platform specific vars
-  include_vars: '{{item}}'
+  include_vars: '{{ item }}'
   with_first_found:
     - files:
-        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-        - '{{ansible_distribution}}.yml'
-        - '{{ansible_os_family}}.yml'
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
       skip: true
       paths:
-        - '{{role_path}}/vars'
+        - '{{ role_path }}/vars'
 
 - name: pkgs...
   become: yes
   become_user: root
-  with_items: '{{emacs_os_pkgs}}'
+  with_items: '{{ emacs_os_pkgs }}'
   package:
-    name: '{{item}}'
+    name: '{{ item }}'
     state: present
-
