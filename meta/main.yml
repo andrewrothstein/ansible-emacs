@@ -26,7 +26,6 @@ galaxy_info:
         - stretch
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
         - bionic
     - name: Alpine
