@@ -1,4 +1,10 @@
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
+    - role: '{{ playbook_dir }}'
+  tasks:
+    - command: emacs --version
+      register: emacs_test_output
+    - name: emacs --version
+      debug:
+        msg: '{{ emacs_test_output.stdout }}'

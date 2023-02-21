@@ -1,6 +1,6 @@
 andrewrothstein.emacs
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-emacs.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-emacs)
+![Build Status](https://github.com/andrewrothstein/ansible-emacs/actions/workflows/build.yml/badge.svg)
 
 Installs [Emacs](https://www.gnu.org/software/emacs/)
 

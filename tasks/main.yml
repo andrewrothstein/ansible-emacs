@@ -10,10 +10,9 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: pkgs...
-  become: yes
+- name: installing os pkgs
+  become: true
   become_user: root
-  with_items: '{{ emacs_os_pkgs }}'
   package:
-    name: '{{ item }}'
+    name: '{{ emacs_os_pkgs }}'
     state: present
