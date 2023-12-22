@@ -1,5 +1,5 @@
 ---
-- name: resolve platform specific vars
+- name: Resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
     - files:
@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: installing os pkgs
+- name: Installing os pkgs
   become: true
   become_user: root
   package:
