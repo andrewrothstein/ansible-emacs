@@ -1,6 +1,6 @@
 ---
 - name: Resolve platform specific vars
-  include_vars: '{{ item }}'
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -13,6 +13,6 @@
 - name: Installing os pkgs
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ emacs_os_pkgs }}'
     state: present

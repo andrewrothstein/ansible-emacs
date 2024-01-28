@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.emacs
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: emacs --version
+    - name: Executing 'emacs --version'
+      ansible.builtin.command: emacs --version
+      changed_when: false
       register: emacs_test_output
-    - name: emacs --version
-      debug:
+    - name: Output of 'emacs --version'
+      ansible.builtin.debug:
         msg: '{{ emacs_test_output.stdout }}'
